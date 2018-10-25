@@ -7,11 +7,12 @@
         <title>Posts</title>
     </head>
     <body class="pt-24">
-        <div class="container mx-auto">
+        <div id="app" class="container mx-auto">
             <p class="float-right">
                 <a class="rounded px-4 py-3 bg-green text-white no-underline" href="{{ route('posts.create') }}">Create Post</a>
             </p>
             @yield('content')
         </div>
+        <script src="{!! mix('js/app.js') !!}"></script>
     </body>
 </html>
