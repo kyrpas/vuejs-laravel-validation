@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostsStoreRequest;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,7 @@ class PostsController extends Controller
         return view('posts.create');
     }
 
-    public function store(Request $request)
+    public function store(PostsStoreRequest $request)
     {
         $post = new Post;
         $post->title = $request->get('title');
