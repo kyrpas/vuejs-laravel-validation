@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Posts</title>
     </head>
     <body class="pt-24">
