@@ -17,6 +17,12 @@ window.Vue = require('vue');
 
 Vue.component('create-post', require('./components/CreatePost.vue'));
 
+Vue.prototype.$watchAll = function(props, callback) {
+    props.forEach(prop => {
+        this.$watch(prop, callback.bind(null, prop));
+    });
+};
+
 const app = new Vue({
     el: '#app'
 });
