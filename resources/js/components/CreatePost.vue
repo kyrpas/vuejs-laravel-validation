@@ -49,6 +49,11 @@
                     this.errors.record(error.response.data.errors);
                 });
             },
+        },
+        mounted(){
+            this.$watchAll(['title','author','date','body'],(prop)=>{
+                this.errors.clear(prop);
+            })
         }
     }
 </script>
