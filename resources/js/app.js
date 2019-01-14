@@ -15,7 +15,9 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('create-post', require('./components/CreatePost.vue'));
+import CreatePost from './components/CreatePost.vue';
+
+Vue.component('create-post', CreatePost);
 
 const app = new Vue({
     el: '#app'
